@@ -1,2 +1,3 @@
-# miniapp-vote
-vote miniapp
+# 投票微信小程序
+发起活动，报名活动，参与活动
+
