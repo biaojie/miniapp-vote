@@ -1,0 +1,21 @@
+<!--pages/minetwo/minetwo.wxml-->
+<view class='mnavs'>
+  <view class='{{mtabclass[0]}}' data-id='0' bindtap='mtabClick'>我给谁礼物</view>
+  <view class='{{mtabclass[1]}}' data-id='1' bindtap='mtabClick'>谁给我礼物</view>
+</view>
+
+<view wx:if="{{mtab == 0}}">
+  <view class='mgivinggift'>
+    <view class='mgg1'><image src='' id='mgg1image'></image><text>昵称</text></view>
+    <view class='mgg2'>送Ta</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+</view>
+
+<view wx:if="{{mtab == 1}}">
+  <view class='mgivinggift'>
+    <view class='mgg1'><image src='' id='mgg1image'></image><text>昵称</text></view>
+    <view class='mgg2'>送我</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+</view>

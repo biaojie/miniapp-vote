@@ -1,0 +1,38 @@
+<!--pages/Signup/Signup.wxml-->
+<view>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:500rpx'>
+  <block wx:for="{{simgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item}}" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='sinfo'><text>选项标题：</text><input type='text' placeholder='请输入标题'></input></view>
+<view class='sinfo'><text>联系电话：</text><input type='text' placeholder='请输入联系电话'></input></view>
+<view class='sinfo'><text>　　姓名：</text><input type='text' placeholder='请输入您的姓名'></input></view>
+<view class='sinfo2'>
+  上传图片：
+  <view class="sUploadPicture ">
+
+  <view class="hide{{tempFilePaths==''?'':'show'}}" wx:for='{{imgs}}' wx:key class='supload'>
+    <view class='supload_1'>
+      <view class='suploadpic'><image data-img="{{item}}" src='{{item}}' data-index="{{index}}" bindtap="previewImg"></image></view>
+      <view class='supload_2' bindtap='deleteImg' data-index="{{index}}"><image src='../../images/delete.png' style='width:40rpx;height:40rpx;'></image></view>
+    </view>
+  </view>
+  
+  <view class="supload {{add?'hide':''}}"bindtap='chooseImg'>
+    <view class='suploadpic'><text>+</text></view>
+  </view> 
+  <view class='smore'>! 最多可上传三张</view>
+</view> 
+</view>
+<view class='sinfo3'>上传视频：<video src="{{ssrc}}" class="hide {{video?'show':''}}" objectFit='fill'></video><text bindtap='bindButtonTap' class='sinfo3text'>点击上传</text></view>
+
+<view class='sinfo3'>参赛宣言：<textarea placeholder='请输入参赛宣言'></textarea></view> 
+
+<view class='sdistance'><button>立即报名</button> </view>
+<view class='sdistance2'></view>
+</view>

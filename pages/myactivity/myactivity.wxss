@@ -1,0 +1,64 @@
+/* pages/myactivity/myactivity.wxss */
+page{
+  background-color: #DDD;
+}
+.info{
+  width: 100%;
+  display: flex;
+  background-color: #FFF;
+  padding: 25rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  color: #888;
+  align-items: center;
+}
+#price{
+  font-size: 45rpx;
+  font-weight: 700;
+  padding: 0 10rpx;
+}
+#price2{
+  color: #F5271C;
+  font-size: 45rpx;
+  font-weight: 700;
+  padding: 0 10rpx;
+}
+.activity{
+  background-color: #FFF;
+  width: 96%;
+  display: flex;
+  /* padding: 25rpx;
+  box-sizing: border-box; */
+  margin-left: 2%;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+.activity image{
+  width: 250rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+.activity2{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx 0;
+}
+.activity21{
+  width: 100%;
+}
+.activity22{
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  color: #888;
+  flex-direction: column;
+  line-height: 45rpx;
+}
+.activity22 text{
+  color: #393A3F;
+  font-weight: 700;
+  padding: 0 10rpx;
+}

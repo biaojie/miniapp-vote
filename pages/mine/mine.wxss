@@ -1,0 +1,65 @@
+/* pages/mine/mine.wxss */
+page{
+  background-color: #DDD;
+}
+.mnavs{
+  width: 100%;
+  display: flex;
+  background-color: #FFF;
+  border-bottom:20rpx solid #DDD;
+}
+.mnaved{
+  flex: 1;
+  padding: 25rpx 0;
+  box-sizing: border-box;
+  border-bottom: 6rpx solid #393A3F;
+  text-align: center;
+  color: #393A3F;
+  font-weight: 700;
+  font-size: 30rpx;
+  white-space: nowrap;
+}
+.mnav{
+  flex: 1;
+  padding: 25rpx 0;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #ddd;
+  text-align: center;
+  font-size: 30rpx;
+  white-space: nowrap;
+}
+.mlist{
+  margin-bottom: 5rpx;
+  background-color: #FFF;
+  display: flex;
+  padding: 25rpx;
+  box-sizing: border-box;
+}
+.mlist image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 180rpx;
+}
+.mlist1{
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+#mlistbo{
+  align-self: flex-end;
+}
+#mlistbo2{
+  color: #AD4335;
+  font-weight: bold;
+}
+.mlist11{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mlist11 text{
+  font-weight: bold;
+  color: #393A3F;
+}

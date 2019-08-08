@@ -1,0 +1,62 @@
+<!--pages/allActivities/allActivities.wxml-->
+
+<view class='title'><text>活动名称:</text><input type='text' placeholder='请输入活动名称'></input></view>
+<view class='title2'><text>活动简介:</text><textarea placeholder='请输入活动简介' maxlength='200'></textarea></view>
+
+
+<view class='sinfo2'>
+  上传图片：
+  <view class="sUploadPicture ">
+
+  <view class="hide{{tempFilePaths==''?'':'show'}}" wx:for='{{imgs}}' wx:key class='supload'>
+    <view class='supload_1'>
+      <view class='suploadpic'><image data-img="{{item}}" src='{{item}}' data-index="{{index}}" bindtap="previewImg"></image></view>
+      <view class='supload_2' bindtap='deleteImg' data-index="{{index}}"><image src='../../images/delete.png' style='width:40rpx;height:40rpx;'></image></view>
+    </view>
+  </view>
+  
+  <view class="supload {{add?'hide':''}}"bindtap='chooseImg'>
+    <view class='suploadpic'><text>+</text></view>
+  </view> 
+  <view class='smore'>! 最多可上传三张</view>
+</view> 
+</view>
+
+<view class='info'>
+  <view class='info11'><image src='../../images/clock.png'></image>选择活动报名时间</view>
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange" id='ifp'>{{date}}</picker>
+  <picker mode="date" value="{{date2}}" bindchange="bindDateChange2">{{date2}}</picker>
+</view>
+<view class='info'>
+  <view class='info11'><image src='../../images/clock2.png'/>选择活动投票时间</view>
+  <picker mode="date" value="{{date3}}" bindchange="bindDateChange3" id='ifp'>{{date3}}</picker>
+  <picker mode="date" value="{{date4}}" bindchange="bindDateChange4">{{date4}}</picker>
+</view>
+
+
+
+<!----------------------------------添加奖品后显示，如果没有奖品则隐藏---------------------------------->
+ <!-- <view class='prizeall'>
+  <view class='prize'>
+    <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+    <view class='prize1'><text id='no1'>第一名</text><text id='thing'>什么什么东西</text><text id='thing'>数量：3</text></view>
+  </view>
+</view>   -->
+
+<view class='add' bindtap='addprize'><image src='../../images/add.png'/>添加活动奖品</view>
+
+<view class="hide {{add?'show':''}}">
+  <view class='bg' bindtap='addprize'></view>
+  <view class='addprize'>
+    <view class='apimg' bindtap='bindViewTap'><text wx:if="{{avatarUrl==''}}">点击上传奖品图片</text><image src='{{avatarUrl}}' wx:else></image></view>
+    <view class='adnum'><picker bindchange="bindPickerChange"  range="{{adnumarray}}">{{adnumarray[adnum]}}</picker></view>
+    <view class='adnum2'><input type='text' placeholder='请输入奖品名称'></input></view>
+    <view class='adnum2'><input type='number' placeholder='请输入奖品数量'></input></view>
+    <button>确定</button>
+  </view>
+</view>
+
+<view class='add'><image src='../../images/gift2.png'/><text>是否开启送礼物功能</text><switch checked bindchange="switch1Change"/></view>
+
+<view class='ib'><button>￥1 创建活动</button></view>
+

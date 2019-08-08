@@ -1,0 +1,45 @@
+/* pages/income/income.wxss */
+page{
+  background-color: #DDD;
+}
+.income{
+  width: 100%;
+  display: flex;
+  background-color: #FFF;
+  padding: 25rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #DDD;
+}
+.income image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+  
+}
+.income1{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 50rpx;
+}
+.income11{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#title{
+  font-size: 34rpx;
+  font-weight: 700;
+}
+#price{
+  font-size: 32rpx;
+  font-weight: 700;
+}
+#date{
+  color: #888;
+  font-size: 30rpx;
+}
+#gincome{
+  font-size: 30rpx;
+  color: #ED2424;
+}

@@ -1,0 +1,15 @@
+<!--pages/income/income.wxml-->
+<view class='income'>
+  <image src='../../images/gift3.png'></image>
+  <view class='income1'>
+    <view class='income11'><text id='title'>活动1</text><text id='price'>+6.00元</text></view>
+    <view class='income11'><text id='date'>2018-01-01 18：00</text><text id='gincome'>礼物收入</text></view>
+  </view>
+</view>
+<view class='income'>
+  <image src='../../images/gift3.png'></image>
+  <view class='income1'>
+    <view class='income11'><text id='title'>活动2</text><text id='price'>+6.00元</text></view>
+    <view class='income11'><text id='date'>2018-01-01 18：00</text><text id='gincome'>礼物收入</text></view>
+  </view>
+</view>

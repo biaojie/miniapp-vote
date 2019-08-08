@@ -1,0 +1,255 @@
+<!------------------------------------首页首页首页首页首页首页首页首页首页首页首页-------------------------------------------->
+<view wx:if="{{index == 0}}">
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:500rpx'>
+  <block wx:for="{{imgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='info'>
+  <view class='info1'><text>参与选手</text><text id='iftext'>10</text></view>
+  <view class='info1'><text>累计票数</text><text id='iftext'>1000</text></view>
+  <view class='info1'><text>访问次数</text><text id='iftext'>10</text></view>
+</view>
+
+<view class='details'>
+  <text id='infotitle'>活动时间：</text>
+  <view class='details1'><image src='../../images/clock.png'/><text>报名时间：2012-02-20——2020+33+33</text></view>
+  <view class='details1'><image src='../../images/clock2.png'/><text>投票时间：2012-02-20——2020+33+33</text></view>
+  <view class='details1'><image src='../../images/rule.png'/><text>投票规则：123338888555888每人每天限投5票，不可重复投一人</text></view>
+</view>
+
+<view class="xq2" bindtap='adetails'>活动详情：<image src='../../images/down.png' wx:if="{{houd}}"/><image src='../../images/right.png' wx:else/></view>
+<view class="hide {{houd?'xq':''}}">
+
+  <text class='xqtext'>为评选最美城市为评选最美城市为评选最美城市为评选最美城市为评选最美城市为评选最美城市为评选最美城市</text>
+  <text id='infotitle'>活动奖品：</text>
+  <view class='prize'>
+    <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+    <view class='prize1'><text id='no1'>第一名</text><text id='thing'>什么什么东西</text><text id='thing'>数量：3</text></view>
+  </view>
+  <view class='prize'>
+    <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+    <view class='prize1'><text id='no1'>第二名</text><text id='thing'>什么什么东西</text><text id='thing'>数量：3</text></view>
+  </view>
+  <view class='prize'>
+    <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+    <view class='prize1'><text id='no1'>第一名</text><text id='thing'>什么什么东西</text><text id='thing'>数量：3</text></view>
+  </view>
+
+</view>
+
+<view class='playall'>
+  <view class='player' wx:for="{{player}}" wx:key bindtap='details' >
+    <view class='playerheader'>{{item.num}}号</view>
+    <image src='{{item.playerimg}}'></image>
+    <text><text id='num'>{{item.num2}}</text>票</text>
+    <view class='playerfooter' catchtap='numadd' data-index='{{index}}'><image src='../../images/good.png'/>投票</view>
+  </view>
+  
+</view>
+
+
+
+<view class='searchicon' bindtap='search'><icon type='search' color='#FFF'></icon></view>
+
+<view class="hide {{search? 'show' :''}}">
+<view class='search2bg' bindtap='search'></view>
+<view class='top'>
+  <view class='top1'>
+    <input type='text' placeholder='请输入编号或参赛名称' ></input>
+    <image src='../../images/search.png'></image>
+  </view>
+</view>
+</view>
+</view> 
+
+<!--  ---------------------------报名报名报名报名报名报名报名报名报名报名报名报名报名报名-------------------------------------------  -->
+<view wx:if="{{index == 1}}">
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:500rpx'>
+  <block wx:for="{{imgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item}}" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='sinfo'><text>选项标题：</text><input type='text' placeholder='请输入标题'></input></view>
+<view class='sinfo'><text>联系电话：</text><input type='text' placeholder='请输入联系电话'></input></view>
+<view class='sinfo'><text>　　姓名：</text><input type='text' placeholder='请输入您的姓名'></input></view>
+<view class='sinfo2'>
+  上传图片：
+  <view class="sUploadPicture ">
+
+    <view class="hide{{imgs==''?'':'show'}}" wx:for='{{imgs}}' wx:key class='supload'>
+      <view class='supload_1'>
+        <view class='suploadpic'><image data-img="{{item}}" src='{{item}}' data-index="{{index}}" bindtap="previewImg"></image></view>
+        <view class='supload_2' bindtap='deleteImg' data-index="{{index}}"><image src='../../images/delete.png' style='width:40rpx;height:40rpx;'></image></view>
+      </view>
+    </view>
+  
+    <view class="supload {{add?'hide':''}}"bindtap='chooseImg'>
+      <view class='suploadpic'><text>+</text></view>
+    </view> 
+   <view class='smore'>! 最多可上传三张</view>
+  </view> 
+</view>
+<view class='sinfo3'>上传视频：<video src="{{ssrc}}" class="hide {{video?'show':''}}" objectFit='fill'></video><text bindtap='bindButtonTap' class='sinfo3text'>点击上传</text></view>
+
+<view class='sinfo3'>参赛宣言：<textarea placeholder='请输入参赛宣言'></textarea></view> 
+
+<view class='sdistance'><button>立即报名</button> </view>
+<view class='sdistance2'></view>
+</view>
+
+
+<!--  ---------------------------排行排行排行排行排行排行排行排行排行排行排行-------------------------------------------  -->
+<view wx:if="{{index == 2}}">
+<view class='rswiper'>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:500rpx'>
+  <block wx:for="{{imgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='rtop1'></view>
+<view class='rinfo'>
+  <view class='rinfo1'><text>参与选手</text><text id='riftext'>10</text></view>
+  <view class='rinfo1'><text>累计票数</text><text id='riftext'>1000</text></view>
+  <view class='rinfo1'><text>访问次数</text><text id='riftext'>100</text></view>
+</view>
+
+
+</view>
+
+
+
+<view class='rlist' bindtap='details'>
+  <view class='rlist1'><view class='rnum' id='rone'><text>1</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>张杰</view>
+  <view class='rlist1'>230票</view>
+</view>
+<view class='rlist'>
+  <view class='rlist1'><view class='rnum' id='rtwo'><text>2</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>韩红</view>
+  <view class='rlist1'>230票</view>
+</view>
+<view class='rlist'>
+  <view class='rlist1'><view class='rnum' id='rthree'><text>3</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>张杰</view>
+  <view class='rlist1'>230票</view>
+</view>
+<view class='rlist'>
+  <view class='rlist1'><view class='rnum'><text>4</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>张杰</view>
+  <view class='rlist1'>230票</view>
+</view>
+
+<view class='rdistance2'></view>
+</view>
+
+
+<!--  ---------------------------我的我的我的我的我的我的我的我的我的我的我的我的我的我的-------------------------------------------  -->
+<view wx:if="{{index == 3}}">
+<view class='mtop'>
+  <view class='mtop1'><image src='{{userInfo.avatarUrl}}'></image></view>
+  <view class='mtop2'>
+    <text>{{userInfo.nickName}}</text>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" size='mini'>点击授权登录</button>
+    <text>余额: 0</text>
+  </view>
+  <view class='mtop3'><view class='mtop3text' bindtap='allActivities'>创建活动</view></view>
+</view>
+
+<view class='list' bindtap='mine'>
+  <image src='../../images/tp.png'></image>
+  <text>投票管理</text>
+  <image src='../../images/right.png' id='listimg'></image>
+</view>
+<view class='list' bindtap='minetwo'>
+  <image src='../../images/gift.png'></image>
+  <text>礼物管理</text>
+  <image src='../../images/right.png' id='listimg'></image>
+</view>
+<view class='list' bindtap='myactivity'>
+  <image src='../../images/hd.png'></image>
+  <text>我的活动</text>
+  <image src='../../images/right.png' id='listimg'></image>
+</view>
+
+<!-- <view class='mnavs'>
+  <view class='{{mtabclass[0]}}' data-id='0' bindtap='mtabClick'>我给谁投票</view>
+  <view class='{{mtabclass[1]}}' data-id='1' bindtap='mtabClick'>谁给我投票</view>
+  <view class='{{mtabclass[2]}}' data-id='2' bindtap='mtabClick'>我给谁礼物</view>
+  <view class='{{mtabclass[3]}}' data-id='3' bindtap='mtabClick'>谁给我礼物</view>
+</view> -->
+
+<!-- <view wx:if="{{mtab == 0}}">
+  <view class='mlist' bindtap='details'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰<text>500票</text></view>
+      <view class='mlist11' id='listbo'>给Ta贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+  <view class='mlist'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰<text>500票</text></view>
+      <view class='mlist11' id='listbo'>给Ta贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{mtab == 1}}">
+  <view class='mlist'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰</view>
+      <view class='mlist11' id='mlistbo'>给我贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+  <view class='mlist'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰</view>
+      <view class='mlist11' id='mlistbo'>给Ta贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{mtab == 2}}">
+  <view class='mgivinggift'>
+    <view class='mgg1'><image src='' id='mgg1image'></image><text>昵称</text></view>
+    <view class='mgg2'>送Ta</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+</view>
+
+<view wx:if="{{mtab == 3}}">
+  <view class='mgivinggift'>
+    <view class='mgg1'><image src='' id='gg1image'></image><text>昵称</text></view>
+    <view class='mgg2'>送我</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+</view> -->
+
+ <view class='mdistance2'></view> 
+</view>
+
+
+<view class='bottom'>
+  <view class='{{tabclass[0]}}' bindtap='tabClick' data-index='0'><image src='../../images/index{{tabclass2[0]}}.png'></image><text>首页</text></view>
+  <view class='{{tabclass[1]}}' bindtap='tabClick' data-index='1'><image src='../../images/Signup{{tabclass2[1]}}.png'></image><text>报名</text></view>
+  <view class='{{tabclass[2]}}' bindtap='tabClick' data-index='2'><image src='../../images/ranking{{tabclass2[2]}}.png'></image><text>排行</text></view>
+  <view class='{{tabclass[3]}}' bindtap='tabClick' data-index='3'><image src='../../images/mine{{tabclass2[3]}}.png'></image><text>我的</text></view>
+</view>

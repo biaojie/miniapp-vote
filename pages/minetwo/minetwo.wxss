@@ -1,0 +1,68 @@
+/* pages/minetwo/minetwo.wxss */
+page{
+  background-color: #DDD;
+}
+.mnavs{
+  width: 100%;
+  display: flex;
+  background-color: #FFF;
+  border-bottom:20rpx solid #DDD;
+}
+.mnaved{
+  flex: 1;
+  padding: 25rpx 0;
+  box-sizing: border-box;
+  border-bottom: 6rpx solid #393A3F;
+  text-align: center;
+  color: #393A3F;
+  font-weight: 700;
+  font-size: 30rpx;
+  white-space: nowrap;
+}
+.mnav{
+  flex: 1;
+  padding: 25rpx 0;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #ddd;
+  text-align: center;
+  font-size: 30rpx;
+  white-space: nowrap;
+}
+.mgivinggift{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 25rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid #ddd;
+  justify-content: space-between;
+  font-size: 30rpx;
+  background-color: #FFF;
+}
+.mgg1{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#mgg1image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 180rpx;
+  border: 2rpx solid #ddd;
+}
+.mgivinggift image{
+  width: 150rpx;
+  height: 100rpx;
+}
+.mgg2{
+  color: #D63644;
+  padding:0 25rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+
+.mdistance2{
+  width: 100%;
+  height: 120rpx;
+  background-color: #DDD;
+}

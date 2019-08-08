@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/allActivities/allActivities",
+    "pages/mine/mine",
+    "pages/Signup/Signup",
+    "pages/Ranking/Ranking",
+    "pages/logs/logs",
+    "pages/details/details",
+    "pages/minetwo/minetwo",
+    "pages/myactivity/myactivity",
+    "pages/income/income"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#393A3F",
+    "navigationBarTitleText": "投票",
+    "navigationBarTextStyle": "#FFF"
+  }
+}

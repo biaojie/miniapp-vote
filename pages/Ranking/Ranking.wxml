@@ -1,0 +1,51 @@
+<!--pages/Ranking/Ranking.wxml-->
+<view>
+<view class='rswiper'>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:500rpx'>
+  <block wx:for="{{rimgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='rtop1'></view>
+<view class='rinfo'>
+  <view class='rinfo1'><text>参与选手</text><text id='riftext'>10</text></view>
+  <view class='rinfo1'><text>累计票数</text><text id='riftext'>1000</text></view>
+  <view class='rinfo1'><text>访问次数</text><text id='riftext'>100</text></view>
+</view>
+
+
+</view>
+
+
+
+<view class='rlist' bindtap='details'>
+  <view class='rlist1'><view class='rnum' id='rone'><text>1</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>张杰</view>
+  <view class='rlist1'>230票</view>
+</view>
+<view class='rlist'>
+  <view class='rlist1'><view class='rnum' id='rtwo'><text>2</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>韩红</view>
+  <view class='rlist1'>230票</view>
+</view>
+<view class='rlist'>
+  <view class='rlist1'><view class='rnum' id='rthree'><text>3</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>张杰</view>
+  <view class='rlist1'>230票</view>
+</view>
+<view class='rlist'>
+  <view class='rlist1'><view class='rnum'><text>4</text></view></view>
+  <view class='rlist1'><image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image></view>
+  <view class='rlist1'>张杰</view>
+  <view class='rlist1'>230票</view>
+</view>
+
+<view class='rdistance2'></view>
+</view>
+

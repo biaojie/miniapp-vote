@@ -1,0 +1,84 @@
+<!--pages/details/details.wxml-->
+<view class='swiper'>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='true' style='height:700rpx' >
+  <block wx:for="{{imgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item}}"/>
+    </swiper-item>
+  </block>
+  
+</swiper>
+<view class='top1'></view><view class='top2'><view>11号</view><view>票数：123</view></view>
+</view>
+
+<view class='info'>
+  <text class='infotitle'>标题：XXXXXXXXXXXXXX</text>
+  <text class='infotext'>参赛宣言：腊月，农历中一年最后一个月，对中国人来说，很多重要时间点都在这个月份。而大雪纷飞，寒冰霜冻的腊月，自然也让历代文人们“脑洞大开”，让我们共同来感受一下腊月里的那独有意境吧。 </text>
+</view>
+
+<view class='comment'>
+  <view class='commenttitle'>
+    <view class='{{commentclass[0]}}' data-id='0' bindtap='commentClick'>评论</view>
+    <view class='{{commentclass[1]}}' data-id='1' bindtap='commentClick'>礼物</view>
+  </view>
+</view>
+<view wx:if="{{commentid == 0}}">
+  <view class='comment1'>
+    <image src=''></image>
+    <view class='comment11'>
+      <text>昵称</text>
+      <text id='comment11text'>什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么</text>
+    </view>
+  </view>
+  <view class='comment1'>
+    <image src=''></image>
+    <view class='comment11'>
+      <text>昵称</text>
+      <text id='comment11text'>什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{commentid == 1}}">
+  <view class='givinggift'>
+    <view class='gg1'><image src='' id='gg1image'></image><text>昵称</text></view>
+    <view class='gg2'>送出</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+  <view class='givinggift'>
+    <view class='gg1'><image src='' id='gg1image'></image><text>昵称</text></view>
+    <view class='gg2'>送出</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+</view>
+
+<view class='distance'></view>
+<view class='bottom'>
+  <view class='bottom1' bindtap='givingGifts'><image src='../../images/index2.png' ></image><text>送礼物</text></view>
+  <view class='bottom21'><view class='zz'><image src='../../images/vote.png'></image><text>投票</text></view></view> 
+  <view class='bottom1' bindtap='comment'><image src='../../images/ranking2.png'></image>评论</view>
+</view>
+
+<view class="hide {{comment?'show':''}}">
+<view class='bg' bindtap='comment'></view>
+<view class='write'>
+  <textarea placeholder='说点什么吧~~~'></textarea>
+  <view class='write1'><button bindtap='comment'>发送</button></view>
+</view>
+</view>
+
+<view class="hide {{gift?'show':''}}">
+<view class='bg' bindtap='givingGifts'></view>
+<view class='gift'>
+  <view class='giftall' >
+    <view class='{{item.giftbg}}' wx:for="{{giftall}}" wx:key data-index='{{index}}' bindtap='giftClick'>
+      <text id='{{item.gifttitlebg}}' >{{item.gifttitle}}</text>
+      <image src='{{item.giftimg}}'></image>
+      <text>{{item.giftname}}</text>
+      <text>{{item.giftprice}}元</text>
+    </view>
+  </view>
+  
+  <button class='gbu' bindtap='pay'>立即赠送</button>
+</view>
+</view>
+

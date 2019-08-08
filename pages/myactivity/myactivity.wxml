@@ -1,0 +1,19 @@
+<!--pages/myactivity/myactivity.wxml-->
+<view class='info'>
+  <text>我创建了<text id='price'>2</text>个活动</text>
+  <text bindtap='income'>总收益<text id='price2'>0</text>元</text>
+</view>
+<view class='activity' bindtap='index'>
+  <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2413675918,1205386043&fm=27&gp=0.jpg'></image>
+  <view class='activity2'>
+    <view class='activity21'>活动1</view>
+    <view class='activity22'><view>活动收益：<text>0</text>元</view><view>参赛人数：<text>2</text>人</view></view>
+  </view>
+</view>
+<view class='activity' bindtap='index'>
+  <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2413675918,1205386043&fm=27&gp=0.jpg'></image>
+  <view class='activity2'>
+    <view class='activity21'>活动1</view>
+    <view class='activity22'><view>活动收益：<text>0</text>元</view><view>参赛人数：<text>2</text>人</view></view>
+  </view>
+</view>

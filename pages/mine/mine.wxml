@@ -1,0 +1,54 @@
+<view class='mnavs'>
+  <view class='{{mtabclass[0]}}' data-id='0' bindtap='mtabClick'>我给谁投票</view>
+  <view class='{{mtabclass[1]}}' data-id='1' bindtap='mtabClick'>谁给我投票</view>
+</view>
+
+<view wx:if="{{mtab == 0}}">
+  <view class='mlist' bindtap='details'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰<text>500票</text></view>
+      <view class='mlist11' id='listbo'>给Ta贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+  <view class='mlist'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰<text>500票</text></view>
+      <view class='mlist11' id='listbo'>给Ta贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{mtab == 1}}">
+  <view class='mlist'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰</view>
+      <view class='mlist11' id='mlistbo'>给我贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+  <view class='mlist'>
+    <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=625376518,2001646629&fm=27&gp=0.jpg'></image>
+    <view class='mlist1'>
+      <view class='mlist11'>张杰</view>
+      <view class='mlist11' id='mlistbo'>给Ta贡献<text id='mlistbo2'>2票</text></view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{mtab == 2}}">
+  <view class='mgivinggift'>
+    <view class='mgg1'><image src='' id='mgg1image'></image><text>昵称</text></view>
+    <view class='mgg2'>送Ta</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+</view>
+
+<view wx:if="{{mtab == 3}}">
+  <view class='mgivinggift'>
+    <view class='mgg1'><image src='' id='gg1image'></image><text>昵称</text></view>
+    <view class='mgg2'>送我</view>
+    <view><image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4121510753,2824158837&fm=27&gp=0.jpg'></image></view>
+  </view>
+</view>
