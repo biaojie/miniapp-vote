@@ -94,7 +94,6 @@
     <view class="supload {{add?'hide':''}}"bindtap='chooseImg'>
       <view class='suploadpic'><text>+</text></view>
     </view> 
-   <view class='smore'>! 最多可上传三张</view>
   </view> 
 </view>
 <view class='sinfo3'>上传视频：<video src="{{ssrc}}" class="hide {{video?'show':''}}" objectFit='fill'></video><text bindtap='bindButtonTap' class='sinfo3text'>点击上传</text></view>
